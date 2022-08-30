@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root {
+    --clr-bright-orange: hsl(31, 77%, 52%);
+    --clr-dark-cyan: hsl(184, 100%, 22%);
+    --clr-very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray : hsl(0, 0%, 95%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+    background-color: var(--Very-light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h2 {
+    font-family: 'Big Shoulders Display';
+    text-transform: uppercase;
+    color: var(--Very-light-gray);
+}
+
+p {
+    font-family: 'Lexend Deca';
+    font-size: 15px;
+    line-height: 22px;
+    padding-bottom: 20px;
+    color: var(--Transparent-white);
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Lexend Deca';
+}
+
+.col-1, 
+.col-2, 
+.col-3 {
+    width: 330px;
+    padding: 50px;
+    letter-spacing: 2px;
+}
+
+.col-1 h2, 
+.col-2 h2,
+.col-3 h2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+div:first-child {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: var(--clr-bright-orange);
+}
+
+div:nth-child(2) {
+    background-color: var(--clr-dark-cyan);
+}
+
+div:last-child {
+    background-color: var(--clr-very-dark-cyan);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+div:first-child a{
+    color: var(--clr-bright-orange);
+}
+
+div:nth-child(2) a{
+    color: var(--clr-dark-cyan);
+}
+
+div:last-child a{
+    color: var(--clr-very-dark-cyan);
+}
+
+.button {
+    background-color: var(--Very-light-gray);
+    padding: 15px;
+    border-radius: 40px;
+}
+
+@media only screen and (min-width: 1440px){
+    body {
+        height: 95vh;
+        flex-direction: row;
+    }
+
+    p {
+        padding-bottom: 100px;
+    }
+
+    div:first-child {
+        border-top-right-radius: 0;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        background-color: var(--clr-bright-orange);
+    }
+
+    div:last-child {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 0;
+
+    }
+
+
+}
